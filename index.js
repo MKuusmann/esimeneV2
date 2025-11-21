@@ -34,7 +34,10 @@ const apiHelloCntrl = (req, res) => {
 const app = express()
 app.use('/', express.static('public'))
 
+app.get('/', tervitusCntrl)
 app.get('/tervitus', tervitusCntrl)
 app.get('/api/hello', apiHelloCntrl)
 
-app.listen(8085)
+const port = process.env.PORT || 8085
+
+app.listen(port, () => console.log('Rakendus töötab ja kuulab pordil: '+ {port}))
