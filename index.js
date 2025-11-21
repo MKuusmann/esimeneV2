@@ -40,4 +40,4 @@ app.get('/api/hello', apiHelloCntrl)
 
 const port = process.env.PORT || 8085
 
-app.listen(port, () => console.log('Rakendus töötab ja kuulab pordil: '+ {port}))
+app.listen(port, () => console.log('Rakendus töötab ja kuulab pordil: ${port}'))
